@@ -24,6 +24,7 @@ export class AutoCompleteAddressControl implements ComponentFramework.StandardCo
     private renderControl(context: ComponentFramework.Context<IInputs>): void {
         const props: IAddressInputControlProps = {
             mapboxKey: context.parameters.mapboxApiKey.raw ?? "",
+            street: context.parameters.street.raw ?? "",
             onAddressConfirmed: this.handleAddressConfirmation
         }
 

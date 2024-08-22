@@ -4,11 +4,14 @@ import { IAddress } from './interfaces/IAddress';
 
 export interface IAddressInputControlProps {
   mapboxKey: string,
+  street: string,
   onAddressConfirmed: (address: IAddress) => void
 }
 
-const AddressControl = ({ mapboxKey, onAddressConfirmed } : IAddressInputControlProps) => {
-  const handleChange = (d: any) => {
+const AddressControl = ({ mapboxKey, street, onAddressConfirmed } : IAddressInputControlProps) => {
+  const [streetAddress, setAddress] = React.useState(street);
+
+  const onAddressSelected = (d: any) => {
     const addressProperties = d.features[0]?.properties;
 
     const result: IAddress = {
@@ -20,13 +23,15 @@ const AddressControl = ({ mapboxKey, onAddressConfirmed } : IAddressInputControl
     };
 
     onAddressConfirmed(result);
+    setAddress(result.street);
   };
   
   return (
     <SearchBox 
       placeholder="Search address..." 
       accessToken={mapboxKey} 
-      onRetrieve={handleChange}
+      onRetrieve={onAddressSelected}
+      value={streetAddress}
     />
   );
 }
