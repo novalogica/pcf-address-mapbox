@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="novalogica" constructor="SampleControl" version="0.0.1" display-name-key="Mapbox Auto Complete Address" description-key="Autocomplete address using Mapbox API" control-type="standard" preview-image="imgs/novalogica.svg">
+  <control namespace="novalogica" constructor="AutoCompleteAddressControl" version="0.0.1" display-name-key="Mapbox Auto Complete Address" description-key="Autocomplete address using Mapbox API" control-type="standard" preview-image="imgs/novalogica.svg">
     <property name="mapboxApiKey" display-name-key="Mapbox Api Key" description-key="Enter a valid Mapbox Api Key" of-type="SingleLine.Text" usage="input" required="true" />
     
     <property name="street" display-name-key="Street" description-key="Please select the field to save street adress" of-type="SingleLine.Text" usage="bound" required="true" />
