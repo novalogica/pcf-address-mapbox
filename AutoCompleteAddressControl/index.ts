@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 import AddressInputControl, { IAddressInputControlProps } from "./AddressControl";
 import { IAddress } from "./interfaces/IAddress";
 
-export class SampleControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+export class AutoCompleteAddressControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     private container: HTMLDivElement;
 	private notifyOutputChanged: () => void;
     private address: IAddress;
