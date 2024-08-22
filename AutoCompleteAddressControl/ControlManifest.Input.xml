@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
   <control namespace="novalogica" constructor="AutoCompleteAddressControl" version="0.0.1" display-name-key="Mapbox Auto Complete Address" description-key="Autocomplete address using Mapbox API" control-type="standard" preview-image="imgs/novalogica.svg">
-    <property name="mapboxApiKey" display-name-key="Mapbox Api Key" description-key="Enter a valid Mapbox Api Key" of-type="SingleLine.Text" usage="input" required="true" />
-    
     <property name="street" display-name-key="Street" description-key="Please select the field to save street adress" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="city" display-name-key="City" description-key="Please select the field to save city" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="state" display-name-key="State" description-key="Please select the field to save state" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="zipcode" display-name-key="Zipcode" description-key="Please select the field to save zip code" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="country" display-name-key="Country" description-key="Please select the field to save country" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="mapboxApiKey" display-name-key="Mapbox Api Key" description-key="Enter a valid Mapbox Api Key" of-type="SingleLine.Text" usage="input" required="true" />
     
     <resources>
       <code path="index.ts" order="1"/>
