@@ -5,10 +5,21 @@
 
 ## Usage
 
+To use this control, you can add the custom control (for example) to "Address 1: Street 1".
 
+Once the control is added, you need to provide the following fields:
 
 
 ![](https://github.com/novalogica/pcf-address-mapbox/blob/main/screenshots/address-bound-fields.png)
+
+| Property | Description    |
+| :---:   | :---: |
+| Mapbox Api Key | Provide Mapbox API Key  |
+| Street | The field where the street name will be stored and the bounded attribute   |
+| City | The field where the city will be stored   |
+| State | The field where the state will be stored   |
+| Zipcode | The field where the zipcode will be stored   |
+| Country | 	The field where the country will be stored   |
 
 
 
