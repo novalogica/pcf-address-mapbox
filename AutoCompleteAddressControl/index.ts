@@ -2,13 +2,13 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import AddressInputControl, { IAddressInputControlProps } from "./AddressControl";
-import { IAddress } from "./interfaces/IAddress";
+import { OutputAddress } from "./interfaces/Address";
 type IControlContext = ComponentFramework.Context<IInputs>;
 
 export class AutoCompleteAddressControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     private container: HTMLDivElement;
 	private notifyOutputChanged: () => void;
-    private address: IAddress;
+    private address: OutputAddress;
 
     constructor()
     {
@@ -36,7 +36,7 @@ export class AutoCompleteAddressControl implements ComponentFramework.StandardCo
 		ReactDOM.render(React.createElement(AddressInputControl, props), this.container);
 	}
 
-    private handleAddressConfirmation = (address: IAddress) => {
+    private handleAddressConfirmation = (address: OutputAddress) => {
         this.address = address;
         this.notifyOutputChanged();
     }

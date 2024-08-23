@@ -1,4 +1,4 @@
-export interface IAddress {
+export interface OutputAddress {
     street: string,
     city: string,
     state: string,
