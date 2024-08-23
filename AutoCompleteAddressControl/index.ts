@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import AddressInputControl, { IAddressInputControlProps } from "./AddressControl";
 import { IAddress } from "./interfaces/IAddress";
+type IControlContext = ComponentFramework.Context<IInputs>;
 
 export class AutoCompleteAddressControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     private container: HTMLDivElement;
@@ -11,17 +12,21 @@ export class AutoCompleteAddressControl implements ComponentFramework.StandardCo
 
     constructor()
     {
-
     }
 
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
+    public init(context: IControlContext, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
     {
         this.container = container;
 		this.notifyOutputChanged = notifyOutputChanged;
 		this.renderControl(context);
     }
 
-    private renderControl(context: ComponentFramework.Context<IInputs>): void {
+    public updateView(context: IControlContext): void
+    {
+        this.renderControl(context);
+    }
+
+    private renderControl(context: IControlContext): void {
         const props: IAddressInputControlProps = {
             mapboxKey: context.parameters.mapboxApiKey.raw ?? "",
             street: context.parameters.street.raw ?? "",
@@ -30,11 +35,6 @@ export class AutoCompleteAddressControl implements ComponentFramework.StandardCo
 
 		ReactDOM.render(React.createElement(AddressInputControl, props), this.container);
 	}
-
-    public updateView(context: ComponentFramework.Context<IInputs>): void
-    {
-        this.renderControl(context);
-    }
 
     private handleAddressConfirmation = (address: IAddress) => {
         this.address = address;
