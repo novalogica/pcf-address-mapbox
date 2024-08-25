@@ -2,7 +2,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import AddressInputControl, { IAddressInputControlProps } from "./AddressControl";
-import { OutputAddress } from "./interfaces/Address";
+import { OutputAddress } from "./interfaces/address";
 type IControlContext = ComponentFramework.Context<IInputs>;
 
 export class AutoCompleteAddressControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { SearchBox } from '@mapbox/search-js-react';
-import { OutputAddress } from './interfaces/Address';
-import { MapboxResponse } from './interfaces/MapboxResponse';
+import { OutputAddress } from './interfaces/address';
+import { MapboxResponse } from './interfaces/mapbox';
 
 export interface IAddressInputControlProps {
   mapboxKey: string,
@@ -13,7 +13,6 @@ const AddressControl = ({ mapboxKey, street, onAddressConfirmed } : IAddressInpu
   const [streetAddress, setAddress] = React.useState(street);
 
   const onAddressSelected = (d: MapboxResponse) => {
-    console.log(d)
     const addressProperties = d.features[0]?.properties;
 
     const result: OutputAddress = {
@@ -29,12 +28,14 @@ const AddressControl = ({ mapboxKey, street, onAddressConfirmed } : IAddressInpu
   };
   
   return (
-    <SearchBox 
-      placeholder="Search address..." 
-      accessToken={mapboxKey} 
-      onRetrieve={onAddressSelected}
-      value={streetAddress}
-    />
+    <div style={{ padding: '1px'}}>
+      <SearchBox 
+        placeholder="Search address..." 
+        accessToken={mapboxKey} 
+        onRetrieve={onAddressSelected}
+        value={streetAddress}
+      />
+    </div>
   );
 }
 
