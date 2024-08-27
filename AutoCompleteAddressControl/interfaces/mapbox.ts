@@ -2,11 +2,11 @@ export interface MapboxResponse {
     features: Feature[]
 }
 
-export interface Feature {
+interface Feature {
     properties: Properties
 }
 
-export interface Properties {
+interface Properties {
     name: string
     address: string
     full_address: string
@@ -15,7 +15,7 @@ export interface Properties {
     language: string
 }
 
-export interface Context {
+interface Context {
     country: Info
     postcode: Info
     place: Info
