@@ -18,7 +18,7 @@ Once the control is added, you need to provide the following fields:
 | State | The field where the state will be stored   |
 | Zipcode | The field where the zipcode will be stored   |
 | Country | 	The field where the country will be stored   |
-| Mapbox Api Key | Provide Mapbox API Key  |
+| Mapbox Api Key | Provide Mapbox API Key (sign up and get it from https://www.mapbox.com/) |
 
 
 
