@@ -13,12 +13,12 @@ Once the control is added, you need to provide the following fields:
 | Property | Description    |
 | :---:   | :---: |
 | Field | Bounded field where the search bar will show - it can also be the street 1 |
-| Mapbox Api Key | Provide Mapbox API Key  |
 | Street | The field where the street name will be stored and the bounded attribute   |
 | City | The field where the city will be stored   |
 | State | The field where the state will be stored   |
 | Zipcode | The field where the zipcode will be stored   |
 | Country | 	The field where the country will be stored   |
+| Mapbox Api Key | Provide Mapbox API Key  |
 
 
 
