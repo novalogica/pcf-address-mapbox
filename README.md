@@ -1,6 +1,6 @@
 # Mapbox Auto-Complete Address Control
 
-![](https://github.com/novalogica/pcf-address-mapbox/blob/v0.0.1/screenshots/address_search.png)
+![](https://github.com/novalogica/pcf-address-mapbox/blob/main/screenshots/autocompleted_address.png)
 
 
 ## Usage
